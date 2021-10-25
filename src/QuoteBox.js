@@ -17,8 +17,10 @@ function QuoteBox() {
   }, []);
 
   return (
-    <div className="QuoteBox" id="quote-box">
-      <p>{quoteData.content}</p>
+    <div className="QuoteBox box" id="quote-box">
+      <p style={{ fontSize: "1.5rem", textAlign: "Center" }}>
+        {quoteData.content}
+      </p>
       <p>--{quoteData.author}</p>
       <button className="button is-primary" onClick={getQuote}>
         New Quote
