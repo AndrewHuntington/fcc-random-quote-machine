@@ -6,7 +6,7 @@ An app that pulls a random quote using an [API](https://github.com/lukePeavey/qu
 
 # Screen Shot
 
-![Screenshot of Quote App](./other/quote-app-ss.png "Random Quote App")
+![Screenshot of Quote App](/other/quote-app-ss.png "Random Quote App")
 
 # Installation and Setup Instructions
 
