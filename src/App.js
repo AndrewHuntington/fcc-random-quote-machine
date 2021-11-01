@@ -8,12 +8,24 @@ const randomColor = () => {
 };
 
 function App() {
-  const [color, setColor] = useState(randomColor());
-  console.log(color);
+  const [prevColor, setPrevColor] = useState("#fafafa");
+  const [currColor, setCurrColor] = useState(randomColor());
 
   return (
-    <div className="App" style={{ backgroundColor: color }}>
-      <QuoteBox color={color} setColor={setColor} randColor={randomColor} />
+    <div
+      className="App"
+      style={{
+        "--bg-color-one": prevColor,
+        "--bg-color-two": currColor,
+        backgroundColor: currColor,
+      }}
+    >
+      <QuoteBox
+        currColor={currColor}
+        setCurrColor={setCurrColor}
+        setPrevColor={setPrevColor}
+        randColor={randomColor}
+      />
     </div>
   );
 }

@@ -9,10 +9,13 @@ async function controlAnimations() {
   const quoteText = document.querySelector(".QuoteBox-text");
   const quoteAuthor = document.querySelector(".QuoteBox-author");
   const app = document.querySelector(".App");
+  const btn = document.querySelector(".QuoteBox-new-quote");
 
   quoteText.classList.toggle("animate__fadeOut");
   quoteAuthor.classList.toggle("animate__fadeOut");
   app.classList.toggle("bg-pan-top");
+  btn.classList.toggle("bg-pan-top");
+  btn.disabled = true;
 
   await sleep(2000);
   quoteText.classList.toggle("animate__fadeOut");
@@ -24,11 +27,13 @@ async function controlAnimations() {
   quoteText.classList.toggle("animate__fadeIn");
   quoteAuthor.classList.toggle("animate__fadeIn");
 
-  await sleep(4000);
+  await sleep(5000);
   app.classList.toggle("bg-pan-top");
+  btn.classList.toggle("bg-pan-top");
+  btn.disabled = false;
 }
 
-function QuoteBox({ color, setColor, randColor }) {
+function QuoteBox({ currColor, setCurrColor, setPrevColor, randColor }) {
   const [quoteData, setQuoteData] = useState({ content: "", author: "" });
   const URL = "https://api.quotable.io/random";
 
@@ -37,7 +42,8 @@ function QuoteBox({ color, setColor, randColor }) {
     const { content, author } = response.data;
 
     controlAnimations();
-    setColor(randColor);
+    setPrevColor(currColor);
+    setCurrColor(randColor);
 
     setTimeout(() => {
       setQuoteData({ content, author });
@@ -49,7 +55,7 @@ function QuoteBox({ color, setColor, randColor }) {
   }, []);
 
   return (
-    <div className="QuoteBox box" id="quote-box" style={{ color }}>
+    <div className="QuoteBox box" id="quote-box" style={{ currColor }}>
       <p
         className="block QuoteBox-text animate__animated animate__slow"
         id="text"
@@ -71,13 +77,13 @@ function QuoteBox({ color, setColor, randColor }) {
           id="tweet-quote"
           className="tweet-quote"
         >
-          <i className="fa-brands fa-twitter-square" style={{ color }}></i>
+          <i className="fa-brands fa-twitter-square" style={{ currColor }}></i>
         </a>
         <button
           id="new-quote"
           className="button QuoteBox-new-quote"
           onClick={getQuote}
-          style={{ backgroundColor: color }}
+          style={{ backgroundColor: currColor }}
         >
           New Quote
         </button>
