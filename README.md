@@ -1,4 +1,4 @@
-# Card Dealer
+# Random Quote App
 
 An app that pulls a random quote using an [API](https://github.com/lukePeavey/quotable) and displays it for the user. The user can then tweet the quote by clicking the Twitter icon displayed in the window.
 
@@ -6,7 +6,7 @@ An app that pulls a random quote using an [API](https://github.com/lukePeavey/qu
 
 # Screen Shot
 
-![Screenshot of Quote App](/other/quote-app-ss.png "Random Quote App")
+![Screenshot of Quote App](./other/quote-app-ss.png "Random Quote App")
 
 # Installation and Setup Instructions
 
