@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Card Dealer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An app that pulls a random quote using an [API](https://github.com/lukePeavey/quotable) and displays it for the user. The user can then tweet the quote by clicking the Twitter icon displayed in the window.
 
-## Available Scripts
+### [Try it live](https://andrewhuntington.github.io/fcc-random-quote-machine/)
 
-In the project directory, you can run:
+# Screen Shot
 
-### `yarn start`
+![Screenshot of Quote App](/other/quote-app-ss.png "Random Quote App")
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Installation and Setup Instructions
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Clone down the repository. You will need `node` and `npm` installed globally on your machine.
 
-### `yarn test`
+Installation:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`npm install`
 
-### `yarn build`
+To Start Server:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`npm start`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To Visit App:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`http://localhost:3000`
 
-### `yarn eject`
+# Technologies Used
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- React
+- JavaScript
+- CSS
+- git / GitHub
+- [Axios](https://www.axios.com)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Reflection
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+This is my answer to FreeCodeCamp's _Build a Random Quote Machine_ Front End Development Library Challenge. I modeled my desgin after the [example](https://codepen.io/freeCodeCamp/full/qRZeGZ) that was given.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The biggest challenge I faced working on this app was getting the animations to work correctly, especially the color transitions. I ended up using a pretty ugly function to handle them all. I wonder if there is a better solution? (I assume there is.)
 
-## Learn More
+This is not a perfect 1-to-1 replication of the example app that was given, however I feel like it is good enough, and I want to move on.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Additional Acknowledgements
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This readme is based on a template called the [Peronsal project README template](https://gist.github.com/martensonbj/6bf2ec2ed55f5be723415ea73c4557c4) by GitHub user [martensonbj](https://gist.github.com/martensonbj).
 
-### Code Splitting
+This project was bootstrapped with `react-create-app`. All other code is my own.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Copyright 2021, Andrew Huntington.
